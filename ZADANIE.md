@@ -2,7 +2,7 @@
 
 W ramach tego zadania należy zmodyfikować kod zadania **Sokoban 4** tak, aby zamiast środowiska CodeWorld używało środowiska tekstowego.
 Stworzenie takiego srodowiska w oparciu o standardowe funkcje tekstowego I/O jest również przedmiotem zadania.
-Frazę `import codeWorld` należy usunąć.
+Frazę `import CodeWorld` należy usunąć.
 
 Elementami rozwiązania powinny być co najmniej:
 
@@ -16,7 +16,7 @@ data Interaction world = Interaction
 data Event = KeyPress String
 type Screen = String
 ```
-Typ `Screen` reprezentuje obraz terminala i powinien zawierać np 23 linie po `<80` znaków, zakończone `\n`
+Typ `Screen` reprezentuje obraz terminala i powinien zawierać np 23 linie po `<=80` znaków, zakończone `\n`
 
 * Przeróbka funkcji `drawState` tak, aby produkowała wyjście tekstowe. Poszczególne elementy należy reprezentowac jako odpowiednie znaki ASCII, 
 np. zgodnie z http://www.sokobano.de/wiki/index.php?title=Level_format - w każdym wypadku użyte znaki należy opisać w README.
