@@ -15,7 +15,7 @@ isWinning (S _ _ b n _) = all (\x -> maze x == Storage) b
     where Level _ maze = levels!!n
 
 endScreen :: Int -> [Char]
-endScreen x = "You won in " ++ show x ++ "moves!\n\
+endScreen x = "You won in " ++ show x ++ " moves!\n\
                \Press 1 for next level\n\
                \Press esc to restart"
 
@@ -45,7 +45,7 @@ tryToGo d (S c _ b n count) =
 
 drawState :: State -> Screen 
 drawState state@(S c _ b n count) =
-    [if y == 41 then '\n' else d y x| x <- [-10..13], y <-[-40..41]] ++ message
+    [if y == 39 then '\n' else d y x| x <- [-10..13], y <-[-40..39]] ++ message
     where 
     message = if isWinning state then endScreen count else []
     level@(Level _ maze) = (levels!!n)
