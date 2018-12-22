@@ -19,7 +19,7 @@ runInteraction (Interaction state step draw) = do
           let state'' = step (KeyPress [input]) state'
           putStr "\ESCc"
           putStrLn(draw state'')
-          putStrLn $ "You pressed: " ++ show input
+--          putStrLn $ "You pressed: " ++ show input
           go state''
 
 main :: IO ()

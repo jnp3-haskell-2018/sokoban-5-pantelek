@@ -58,5 +58,5 @@ pictureOfBools xs = translated (-fromIntegral (div k 2)) (fromIntegral k) (go 0 
                       (pictureOfBool b)
           & go (i+1) bs
 
-        pictureOfBool True =  (\d -> addCharAtInitialPos d 'o')
-        pictureOfBool False = (\d -> addCharAtInitialPos d 'x')
+        pictureOfBool True =  addCharAtInitialPos 'o'
+        pictureOfBool False = addCharAtInitialPos 'x'

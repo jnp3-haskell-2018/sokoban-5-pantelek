@@ -45,7 +45,7 @@ tryToGo d (S c _ b n count) =
 
 drawState :: State -> Screen 
 drawState state@(S c _ b n count) =
-    [if y == 41 then '\n' else d y x| x <- [-10..13], y <-[-40..41]] ++ message
+    [if y == 39 then '\n' else d y x| x <- [-10..13], y <-[-40..39]] ++ message
     where 
     message = if isWinning state then endScreen count else []
     level@(Level _ maze) = (levels!!n)

@@ -5,17 +5,17 @@ import Types
 import Levels
 import MazeOps
 
-addCharAtInitialPos :: DrawFun -> Char -> DrawFun
-addCharAtInitialPos d c = (\x y -> if x == 0 && y == 0 then c else d x y)
+addCharAtInitialPos :: Char -> Picture
+addCharAtInitialPos c d = (\x y -> if x == 0 && y == 0 then c else d x y)
 
 blank, wall, ground, storage, box, boxt, player, playert :: Picture
-wall    = (\d -> addCharAtInitialPos d '#')
-player  = (\d -> addCharAtInitialPos d '@')
-playert = (\d -> addCharAtInitialPos d '+')
-box     = (\d -> addCharAtInitialPos d '$')
-boxt    = (\d -> addCharAtInitialPos d '*')
-storage = (\d -> addCharAtInitialPos d '.')
-ground  = (\d -> addCharAtInitialPos d ' ')
+wall    = addCharAtInitialPos '#'
+player  = addCharAtInitialPos '@'
+playert = addCharAtInitialPos '+'
+box     = addCharAtInitialPos '$'
+boxt    = addCharAtInitialPos '*'
+storage = addCharAtInitialPos '.'
+ground  = addCharAtInitialPos ' '
 blank   = id 
 
 (&) = (.)
