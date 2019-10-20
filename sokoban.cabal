@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b9573c3035d4d3ac637056b85514e3226613241ece7ad27519f7362e36e4de90
+-- hash: 4d75805156821ce1b41c0c283cdf41f7abf9efec9224fd0790d37c48572b29bd
 
 name:           sokoban
 version:        0.1.0.0
